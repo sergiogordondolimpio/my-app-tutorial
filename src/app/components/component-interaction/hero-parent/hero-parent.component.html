@@ -8,8 +8,53 @@
     [master]="master"
     [username]="username">
 </app-hero-child>
+
+<hr>
 <!-- onChanges test -->
 <h2>Intercept input property changes with ngOnChanges()</h2>
 <button type="button" (click)="newMinor()">New minor version</button>
 <button type="button" (click)="newMajor()">New major version</button>
 <app-hero-child [major]="major" [minor]="minor"></app-hero-child>
+
+<hr>
+<!-- Events -->
+<h1>Events</h1>
+<h2>Should mankind colonize the Universe?</h2>
+<h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
+
+<app-hero-child-event
+    *ngFor="let voter of voters"
+    [name]="voter"
+    (voted)="onVoted($event)">
+</app-hero-child-event>
+
+<hr>
+<h3>Countdown to Liftoff (via local variable)</h3>
+<button type="button" (click)="timer.start()">Start</button>
+<button type="button" (click)="timer.stop()">Stop</button>
+<div class="seconds">{{timer.seconds}}</div>
+<!-- Access to the events and properties with a local variable called timer -->
+<app-hero-child-local-variable #timer></app-hero-child-local-variable>
+
+<hr>
+<!-- Without local variable -->
+<h3>Countdown to Liftoff (via ViewChild, without local variable)</h3>
+<button type="button" (click)="start()">Start</button>
+<button type="button" (click)="stop()">Stop</button>
+<div class="seconds">{{ seconds() }}</div>
+<app-hero-child-local-variable></app-hero-child-local-variable>
+
+<hr>
+<!-- With service provider -->
+<h2>Mission Control</h2>
+<button type="button" (click)="announce()">Announce mission</button>
+
+<app-hero-child-with-service
+  *ngFor="let astronaut of astronauts"
+  [astronaut]="astronaut">
+</app-hero-child-with-service>
+
+<h3>History</h3>
+<ul>
+  <li *ngFor="let event of history">{{event}}</li>
+</ul>

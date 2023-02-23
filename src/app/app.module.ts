@@ -10,6 +10,9 @@ import { EmulatedComponent } from './components/encapsulation/emulated.component
 import { ShadowDomComponent } from './components/encapsulation/shadowdom.component';
 import { HeroChildComponent } from './components/component-interaction/hero-child/hero-child.component';
 import { HeroParentComponent } from './components/component-interaction/hero-parent/hero-parent.component';
+import { HeroChildEventComponent } from './components/component-interaction/hero-child-event/hero-child-event.component';
+import { HeroChildLocalVariableComponent } from './components/component-interaction/hero-child-local-variable/hero-child-local-variable.component';
+import { HeroChildWithServiceComponent } from './components/component-interaction/hero-child-with-service/hero-child-with-service.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HeroParentComponent } from './components/component-interaction/hero-par
     EmulatedComponent,
     ShadowDomComponent,
     HeroChildComponent,
-    HeroParentComponent
+    HeroParentComponent,
+    HeroChildEventComponent,
+    HeroChildLocalVariableComponent,
+    HeroChildWithServiceComponent
   ],
   imports: [
     BrowserModule
