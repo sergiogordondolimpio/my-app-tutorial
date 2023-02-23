@@ -1,0 +1,11 @@
+<div *ngIf="hero">
+    <h3>{{hero.name}} says:</h3>
+    <p>I, {{hero.name}}, am at your service, {{masterName}}.</p>
+    <p>Username: {{username}}.</p>
+    <br>
+  </div>
+  <h3>Version {{major}}.{{minor}}</h3>
+  <h4>Change log:</h4>
+  <ul>
+    <li *ngFor="let change of changeLog">{{change}}</li>
+  </ul>

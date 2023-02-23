@@ -8,6 +8,8 @@ import { EncapsulationComponent } from './components/encapsulation/encapsulation
 import { NoneComponent } from './components/encapsulation/none.component';
 import { EmulatedComponent } from './components/encapsulation/emulated.component';
 import { ShadowDomComponent } from './components/encapsulation/shadowdom.component';
+import { HeroChildComponent } from './components/component-interaction/hero-child/hero-child.component';
+import { HeroParentComponent } from './components/component-interaction/hero-parent/hero-parent.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ShadowDomComponent } from './components/encapsulation/shadowdom.compone
     EncapsulationComponent,
     NoneComponent,
     EmulatedComponent,
-    ShadowDomComponent
+    ShadowDomComponent,
+    HeroChildComponent,
+    HeroParentComponent
   ],
   imports: [
     BrowserModule
