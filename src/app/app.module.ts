@@ -13,6 +13,15 @@ import { HeroParentComponent } from './components/component-interaction/hero-par
 import { HeroChildEventComponent } from './components/component-interaction/hero-child-event/hero-child-event.component';
 import { HeroChildLocalVariableComponent } from './components/component-interaction/hero-child-local-variable/hero-child-local-variable.component';
 import { HeroChildWithServiceComponent } from './components/component-interaction/hero-child-with-service/hero-child-with-service.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+// angular material
+import { NavComponent } from './components/nav/nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -27,10 +36,18 @@ import { HeroChildWithServiceComponent } from './components/component-interactio
     HeroParentComponent,
     HeroChildEventComponent,
     HeroChildLocalVariableComponent,
-    HeroChildWithServiceComponent
+    HeroChildWithServiceComponent,
+    NavComponent,
+    SidenavComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

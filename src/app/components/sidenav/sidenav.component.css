@@ -1,0 +1,22 @@
+.container {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.sidenav {
+  padding: 0px;
+  width: 200px;
+}
+ 
+.button-weight-full {
+  width: 80%;
+}
